@@ -1,4 +1,4 @@
-<div >
+<div>
 	<h2>Borrar un artículo</h2>
 	<?php include "form_and_inputs.php"; ?>
 <!--	<script type='text/javascript'>

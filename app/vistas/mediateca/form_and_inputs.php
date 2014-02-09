@@ -1,4 +1,3 @@
-
 <form id='form_anexar' method='post' action="<?php echo URL_ROOT; echo $datos['controlador_clase']; ?>/validar_<?php echo $datos['controlador_metodo']; ?>" >
 	<input id='id' name='id' type='hidden' value='<?php echo \core\Array_Datos::values('id', $datos); ?>' />
 	          

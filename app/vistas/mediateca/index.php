@@ -1,45 +1,36 @@
 <div id='libros' class="tabla">
-	<table border='0px'>
+	<table border='1px'>
 		<thead>
 			<tr>
-				<th>Título</th><td></td>
-				<th>Edita</th><td></td>
-				<th>Año de edición</th><td></td>
-				<th>PVP</th><td></td>
-				<th>Tamaño</th><td></td>
-				<th>Páginas</th><td></td>
-				<th>Color</th><td></td>
-				<th>Disponible desde</th><td></td>
+				<th>Título</th>
+				<th>Edita</th>
+				<th>Año de edición</th>
+				<th>PVP</th>
+				<th>Tamaño</th>
+				<th>Páginas</th>
+				<th>Color</th>
+				<th>Disponible desde</th>
 				<th>Acciones</th>
 			</tr>
 		</thead>
 		<tbody>
 			<?php
-			/*
-			 for ($i = 0; $i < count($datos['libros']); $i++) {
-			 
-				echo "<tr>
-						<td>{$datos['libros'][$i]['titulo']}</td>
-						<td>{$datos['libros'][$i]['autor']}</td>
-						<td>{$datos['libros'][$i]['comentario']}</td>
-					</tr>";
-			}
-			*/
+			
 			foreach ($datos['filas'] as $fila){
 				echo "<tr>
-						<td class='celda_izquierda'>{$fila['titulo']}</td><td>|</td>
-						<td>{$fila['edita']}</td><td>|</td>
-						<td>{$fila['anio_edicion']}</td><td>|</td>
-                                                <td>".\core\Conversiones::decimal_punto_a_coma($fila['pvp'])."</td><td>|</td>
-						<td>{$fila['tamanio']}</td><td>|</td>
-						<td>{$fila['paginas']}</td><td>|</td>
-						<td>{$fila['color']}</td><td>|</td>
-						<td>".\core\Conversiones::fecha_mysql_a_es($fila['disponible_desde'])."</td><td>|</td>
-                                                <td class='celda_derecha'>"
+						<td class='celda_izquierda'>{$fila['titulo']}</td>
+						<td>{$fila['edita']}</td>
+						<td>{$fila['anio_edicion']}</td>
+                                                <td>".\core\Conversiones::decimal_punto_a_coma($fila['pvp'])."</td>
+						<td>{$fila['tamanio']}</td>
+						<td>{$fila['paginas']}</td>
+						<td>{$fila['color']}</td>
+						<td>".\core\Conversiones::fecha_mysql_a_es($fila['disponible_desde'])."</td>
+                                                <td class='celda_derecha'>"                                                 
                                                 // <a class='boton' onclick='submit_post_request_form(\"".\core\URL::generar("mediateca/form_modificar")."\", {$fila['id']});' >modificar</a>
                                                 .\core\HTML_Tag::a_boton_onclick("boton", array("mediateca", "form_modificar", $fila['id']), "modificar")
                                                 // <a class='boton' onclick='submit_post_request_form(\"".\core\URL::generar("usuarios/form_borrar")."\", {$fila['id']});' >borrar</a>
-                                                ."-".\core\HTML_Tag::a_boton_onclick("boton", array("mediateca", "form_borrar", $fila['id']), "borrar").
+                                                ."/".\core\HTML_Tag::a_boton_onclick("boton", array("mediateca", "form_borrar", $fila['id']), "borrar").
                                                 // <a class='boton' onclick='submit_post_request_form(\"".\core\URL::generar("usuarios/form_cambiar_password")."\", {$fila['id']});' >modificar password</a>
                                                 "</td>
                                         </tr>
@@ -54,6 +45,3 @@
 		</tfoot>
 	</table>
 </div>
-
-
-
