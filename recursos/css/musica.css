@@ -1,0 +1,31 @@
+table{
+    border-collapse:collapse; 
+    border: none;
+
+}
+tr{
+    height: 40px;
+}
+th, td{
+     min-width:10px;
+}
+.celda_izquierda{
+    padding-left: 10px;
+}
+.celda_derecha{
+    padding-right: 10px;
+}
+tbody>tr:nth-child(odd){
+    background-color: rgba(200,15,21,0.3);
+    color: black;
+}
+tbody>tr:nth-child(even){
+    background-color: rgba(20,20,20,0.5);
+    color: white;
+}
+.formulario{
+   padding-top: 50px;
+}
+.entrada{
+    margin-top: 15px;
+}
