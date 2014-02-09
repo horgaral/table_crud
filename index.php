@@ -8,9 +8,9 @@ define("PATH_ROOT", __DIR__.DS ); // Finaliza en DS
 
 define("PATH_APP", __DIR__.DS."app".DS ); // Finaliza en DS
 
-define("URL_ROOT", (isset($_SERVER['REQUEST_SCHEME'])?$_SERVER['REQUEST_SCHEME']:"http")."://".$_SERVER['SERVER_NAME'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME'])); // Finaliza en DS
+define("URL_ROOT", (isset($_SERVER['REQUEST_SCHEME'])?$_SERVER['REQUEST_SCHEME']:"http")."://".$_SERVER['SERVER_NAME'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME']).DS ); // Finaliza en DS
 
-define('TITULO', 'Super MediatecoMán');
+define('TITULO', 'Mi_Mediateca');
 
 
 // Preparar el autocargador de clases.
