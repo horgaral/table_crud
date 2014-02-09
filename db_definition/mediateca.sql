@@ -1,3 +1,6 @@
+-- Creacion y asignacion de todos los permisos al usuario daw2_user para database daw2 en servidor localhost
+GRANT ALL PRIVILEGES ON daw2.* TO 'daw2_user'@'localhost' IDENTIFIED BY 'daw2_user';
+
 /** Creación de la tabla "daw2_mediateca" **/
 use daw2;
 drop table if exists daw2_mediateca;
