@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<title><?php echo TITULO; ?></title>
-		<meta name="Description" content="Página web MVC" /> 
-		<meta name="Keywords" content="mediateca MVC lopandpe" /> 
+		<meta name="Description" content="Página web modelo MVC" /> 
+		<meta name="Keywords" content="palabras en castellano e ingles separadas por comas" /> 
 		<meta name="Generator" content="netbeans php" /> 
-	 	<meta name="Origen" content="lopandpe" /> 
-		<meta name="Author" content="lopandpe" /> 
-		<meta name="Locality" content="Madrid, Espa�a" /> 
+	 	<meta name="Origen" content="horgaral" /> 
+		<meta name="Author" content="horgaral" /> 
+		<meta name="Locality" content="Madrid, España" /> 
 		<meta name="Lang" content="es" /> 
 		<meta name="Viewport" content="maximum-scale=10.0" /> 
 		<meta name="revisit-after" content="1 days" /> 
@@ -18,12 +18,11 @@
 		<link href="favicon.ico" rel="icon" type="image/x-icon" /> 
 		
 		<link rel="stylesheet" type="text/css" href="<?php echo URL_ROOT; ?>recursos/css/principal.css" />
-                <link rel="stylesheet" type="text/css" href="<?php echo URL_ROOT; ?>recursos/css/<?php echo \core\Distribuidor::get_controlador_instanciado(); ?>.css" />
 		<style type="text/css" >
 			/* Definiciones hoja de estilos interna */
 		</style>
 
-		<script type="text/javascript" src="<?php echo URL_ROOT; ?>recursos/js/jquery/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src=""></script>
 		
 		<script type="text/javascript" >
 			/* l�neas del script */
@@ -33,39 +32,38 @@
 	</head>
 
 	<body>
-            <img id="full-screen-background-image" alt="fondo de pantalla" src="<?php echo URL_ROOT; ?>recursos/imagenes/fondo.jpg"  />
+            <img id="fondo" alt="fondo de pantalla" src="<?php echo URL_ROOT; ?>recursos/imagenes/fondo.jpg"  />
 	
 		<!-- Contenido que se visualizar� en el navegador, organizado con la ayuda de etiquetas html -->
-                <div id="wrapper">
-		<div id="encabezado">
+		
+                <div id="encabezado">
                     <h1><?php echo TITULO ?></h1>
-                    <ul id="menu">
-                        <li><a href="<?php echo URL_ROOT; ?>inicio">Inicio</a></li>
-                        <li><a href="<?php echo URL_ROOT; ?>hemeroteca">Hemeroteca</a></li>
-
-                        
-                    </ul>
                 </div>
 		
-		
+                <div id="id_menu"
+                    <ul>
+                            <li><a class="inicio" href="?menu=inicio&submenu=index">Inicio</a></li>
+                            <li><a class="inicio"href="?menu=mediateca&submenu=index">Mediateca</a></li>
+
+                    </ul>
+		</div>
 
 		<div id="view_content">
 
 			<?php
 				echo $datos['view_content'];
 			?>
-                    <br /><br />
-                  <?php 
-//                  var_dump($datos);
-                  ?>
-		</div> 
+			
+		</div>
 
 	
 		<div id="pie">
 			<hr />
-			Documento creado por lopandpe.
+			</br>
+			Documento creado por Alvaro Horcajuelo Garcia. <a href="mailto:alvarito_hg82@hotmail.com">Contactar</a><br />
+			Fecha última actualización: 9 de febrero de 2014.
 		</div>
-		<?php echo \core\HTML_Tag::post_request_form(); ?>
+		
                 </div>
 	</body>
 
